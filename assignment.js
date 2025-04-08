@@ -1,5 +1,3 @@
-// Create a file and push it to github, submit your github link
-
 // Functions Assignment
 
 // Declare a function fullName and it print out your full name.
@@ -76,18 +74,30 @@ const namesToUpper = names.map((name) => name.toUpperCase());
 console.log(namesToUpper);
 
 // Use map  to map the products array to its corresponding prices.
-const productPriceMatch = products.map((item, value) => item, value);
-console.log(productPriceMatch);
+// const productPriceMatch = products.map((item, value) => item: value);
+// console.log(productPriceMatch);
 
 // Use filter  to filter out countries containing .
 
 // Use filter  to filter out countries having six character.
+const countriesSixChar = countries.filter((country) => country.length == 6);
+console.log(countriesSixChar);
 
 // Use filter  to filter out countries containing six letters and more in the country array.
+const countriesSixCharAbove = countries.filter(
+  (country) => country.length >= 6
+);
+console.log(countriesSixCharAbove);
 
 // Use filter to filter out country start with 'E';
+const countriesStartWithE = countries.filter((country) =>
+  country.startsWith("E")
+);
+console.log(countriesStartWithE);
 
 // Use  filter to filter out only prices with values.
+// const productsPricesNotNull = products.filter(product => price)
+// console.log(productsPricesNotNull)
 
 // Declare a function called  which returns an array of countries which have some common pattern(you find the countries array (eg 'land', 'ia', 'island','stan')).
 
