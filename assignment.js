@@ -74,10 +74,12 @@ const namesToUpper = names.map((name) => name.toUpperCase());
 console.log(namesToUpper);
 
 // Use map  to map the products array to its corresponding prices.
-// const productPriceMatch = products.map((item, value) => item: value);
-// console.log(productPriceMatch);
+const productPriceMatch = products.map((product) => product.price);
+console.log(productPriceMatch);
 
-// Use filter  to filter out countries containing .
+// Use filter  to filter out countries containing A.
+const countriesWithA = countries.filter((country) => country.includes("a"));
+console.log(countriesWithA);
 
 // Use filter  to filter out countries having six character.
 const countriesSixChar = countries.filter((country) => country.length == 6);
@@ -96,10 +98,23 @@ const countriesStartWithE = countries.filter((country) =>
 console.log(countriesStartWithE);
 
 // Use  filter to filter out only prices with values.
-// const productsPricesNotNull = products.filter(product => price)
-// console.log(productsPricesNotNull)
+
+const productsPricesNotNull = products.filter(
+  (product) => product.price !== ""
+);
+console.log(productsPricesNotNull);
 
 // Declare a function called  which returns an array of countries which have some common pattern(you find the countries array (eg 'land', 'ia', 'island','stan')).
+let countriesPattern = countries.filter((country) => country.includes("land"));
+console.log(countriesPattern);
+
+countriesPattern = countries.filter((country) => country.includes("ia"));
+console.log(countriesPattern);
+
+countriesPattern = countries.filter((country) => country.includes("island"));
+console.log(countriesPattern);
+countriesPattern = countries.filter((country) => country.includes("stan"));
+console.log(countriesPattern);
 
 // Objects Assignmnet
 
@@ -107,19 +122,15 @@ console.log(countriesStartWithE);
 const dogPrint = {};
 
 // Add name, legs, color, age and bark properties for the dog object.
-// The bark property is a method which return Get name, legs, color, age and bark value from the dog object
-// const dog = {
-//   name: "Peekachu",
-//   legs: 4,
-//   color: "brown",
-//   age: 10,
-//   // bark: 'woof'
-//   bark: function (dogBark) {
-//     dogName = this.name,
-//     numLegs = this.legs,
-//     dogColor = this.color,
-//     dogAge = this.age
+(dogPrint.name = "Peekachu"),
+  (dogPrint.legs = 4),
+  (dogPrint.color = "brown"),
+  (dogPrint.age = 10),
+  (dogPrint.bark = function () {
+    return `Name: ${this.name}, Legs: ${this.legs}, Color: ${this.color}, Age: ${this.age}, Bark: Woof Woof!`;
+  }),
+  console.log(dogPrint);
 
-//   },
-// };
-// console.log(dog.bark(dogBark));
+// The bark property is a method which return Get name, legs, color, age and bark value from the dog object
+
+console.log(dogPrint.bark());
